@@ -1,18 +1,22 @@
 # Apartment Price Prediction
 
 ## Project Description
-Predicts renting price of apartments in canton of Zurich. 
+
+Predicts renting price of apartments in canton of Zurich.
 
 ## Results
-The model is still overfitting, more data may help to improve the performance of the model. The canton of Zurich has 160 political municipalities. With only 2344 data points, a municipality has an average of 14.65 data points. With more data, the location 
+
+The model is still overfitting, more data may help to improve the performance of the model. The canton of Zurich has 160 political municipalities. With only 2344 data points, a municipality has an average of 14.65 data points. With more data, the location.
 
 ### Name & URL
+
 | Name          | URL |
 |--------------|----|
 | Huggingface  | [Huggingface Space](https://huggingface.co/spaces/kuhs/apartment) |
 | Code         | [GitHub Repository](https://github.com/bkuehnis/ai-application-apartment-prediction/tree/main) |
 
 ## Data Sources and Features Used Per Source
+
 | Data Source | Features |
 |-------------|----------|
 | [Immoscout24](https://www.immoscout24.ch/) | bfs_number, rooms, area, price, postalcode, address, town, description_raw |
@@ -22,6 +26,7 @@ The model is still overfitting, more data may help to improve the performance of
 | [Swiss Geo API](https://api3.geo.admin.ch/services/sdiservices.html) | Latitude, longitude |
 
 ## Features Created
+
 | Feature | Description |
 |---------|-------------|
 | room_per_m2 | Room / area |
@@ -33,10 +38,13 @@ The model is still overfitting, more data may help to improve the performance of
 | zurich_city | Binary feature if apartment is in the city Zurich |
 
 ## Model Training
+
 ### Amount of Data
+
 - Total of 2344 apartments
 
 ### Data Splitting Method (Train/Validation/Test)
+
 - First 80/20 Train/Test split then changed to cross-validation using 5 splits due to data limitations.
 
 ### Performance
@@ -56,6 +64,5 @@ The model is still overfitting, more data may help to improve the performance of
 | 11 | Random Forest | Train: 0.94, Test: 0.65, Train RMSE: 255, Test RMSE: 638 | Same as It. 9 | Changed train/test split, resulted in overfitting |
 
 ## References
+
 ![Feature Importance](doc/feature_importance.png "Feature Importance")<span id="fig1"></span>
-
-
