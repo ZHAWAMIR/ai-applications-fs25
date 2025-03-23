@@ -22,6 +22,11 @@ app = gr.Interface(
         gr.Number(label="Fläche in m²"),
         gr.Number(label="Entfernung zum Stadtzentrum (km)")
     ],
+    examples=[
+        [4.0, 100, 1.5],
+        [3.5, 75.0, 7.5],
+        [4.5, 115, 20.0],
+    ],
     outputs=gr.Textbox(label="Vorhersage"),
 )
 
